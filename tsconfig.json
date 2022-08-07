@@ -6,6 +6,7 @@
         "target": "es2015",
         "module": "ESNext",
         "types":["jest","node","@types/jest"],
+        "plugins": [{ "name": "typescript-plugin-css-modules" }],
     
         // Rules for your code
         "strict": false,
@@ -23,10 +24,13 @@
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
 
+        
+
     },
     // Folder for your code
     "include": [
         "./src/**/*" , 
         "./tests/**/*",
-        "./models/**/*" ]
+        "./models/**/*",
+        "./styles/**/*"  ]
 }

@@ -2,6 +2,7 @@ import { Container, Graphics, Loader } from "pixi.js";
 import { assets } from "../static/assets";
 import { IScene, GameManager } from "./gameManager";
 import { GameScene } from "./gameScene";
+import { PokerGame } from "./pokerGame";
 
 export class LoaderScene extends Container implements IScene {
 
@@ -46,7 +47,7 @@ export class LoaderScene extends Container implements IScene {
 
     private gameLoaded(): void {
         // Change scene to the game scene!
-        GameManager.changeScene(new GameScene());
+        GameManager.changeScene(new PokerGame());
     }
 
     public update(framesPassed: number): void {

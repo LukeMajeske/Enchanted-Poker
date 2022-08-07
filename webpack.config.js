@@ -56,8 +56,13 @@ module.exports = (env, argv) => {
                     test: /\.ts(x)?$/,
                     loader: 'ts-loader',
                     exclude: /node_modules/
+                },
+                {   test: /\.css$/i,
+                use: ['style-loader',
+                    {loader: 'css-loader', options:{modules:true}}
+                   ]
                 }
-            ]
+            ],
         },
         resolve: {
             extensions: [
@@ -78,7 +83,7 @@ module.exports = (env, argv) => {
                 template: 'src/index.ejs',
                 hash: true,
                 minify: false
-            })
+            }),
         ]
     });
 }

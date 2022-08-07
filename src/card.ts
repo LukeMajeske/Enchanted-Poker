@@ -15,7 +15,6 @@ export default class Card{
         this.faceUp = faceUp;
         if(texture!=null){
             this.texture = new Texture(texture.baseTexture);
-                    //const texture= Loader.shared.resources["card_sprite_sheet.png"].texture; 
             const frame = this.faceUp ? new Rectangle(this.cardSuit*cardW,this.cardNumber*cardH,cardW,cardH)
             :new Rectangle(0,0,cardW,cardH);
             if(this.texture != undefined){
